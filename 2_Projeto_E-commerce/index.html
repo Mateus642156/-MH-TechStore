@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="JS/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Parte superior -->
+        <header class="cabecalho-topo">
+            <div class="cabecalho">
+                <div class="logo">
+                    <img src="IMG/logoDaEmpresa.png" alt="Logo da empresa" class="logo">
+                </div>
+                <div class="pesquisa">
+                    <input type="text" id="pesquisa" placeholder="O que você está procurando?">
+                    <button class="btn-lupa">🔍</button>
+                </div>
+                <div class="acoes">
+                    <a href="#">
+                        <i class="bi bi-person"></i>
+                        Minha Conta
+                    </a>
+
+                    <a href="#" id="abrir-favoritos">
+                        <i class="bi bi-heart"></i>
+                        <span id="contador-favoritos">
+                            0
+                        </span>
+                    </a>
+
+                    <a href="#" class="carrinho" id="abrir-modal">
+                        <i class="bi bi-cart3"></i>
+                        <span class="contador" id="contador-carrinho">
+                            2
+                        </span>
+                    </a>
+                    <p id="mensagem"></p>
+                </div>
+            </div>
+            <!-- Parte inferior -->
+            <nav class="menu">
+                <div class="categorias">
+                    ☰ Todas as categorias
+                </div>
+
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#iphone-15">Celulares</a></li>
+                    <li><a href="#notebooks">Notebooks</a></li>
+                    <li><a href="#fone-bjs">Acessórios</a></li>
+                    <li><a href="#smartwatch">Eletrônicos</a></li>
+                    <li><a href="#sobreNos" id="sobre-nos">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Seção principal-->
+        <main id="inicio">
+            <section class="secao-banner">
+                <div class="banner-conteudo">
+                    <span class="tecnologia">Tecnologia que te acompanha</span>
+
+                    <h1>
+                        Os melhores <br> produtos,
+                        <span class="orange">em um só lugar!</span>
+                    </h1>
+
+                    <p>Celulares, notebboks e acessórios e muito mais, <br>
+                        com qualidade, segurança e entrega Rápida.
+                    </p>
+
+                    <button class="btn-ofertas">Ver ofertas</button>
+                </div>
+            </section>
+
+            <!--Seçoes article-->
+            <section class="categori" id="categorias">
+
+                <article class="catego" data-filtro="celulares">
+                    <i class="bi bi-phone"></i>
+                    <h2>Celulares</h2>
+                </article>
+                <article class="catego" data-filtro="notebooks">
+                    <i class="bi bi-laptop"></i>
+                    <h2>Notebook</h2>
+                </article>
+                <article class="catego" data-filtro="fones">
+                    <i class="bi bi-headset"></i>
+                    <h2>Fones</h2>
+                </article>
+                <article class="catego" data-filtro="smartwatch">
+                    <i class="bi bi-smartwatch"></i>
+
+                    <h2>SmartWatch</h2>
+
+                </article>
+                <article class="catego" data-filtro="games">
+                    <i class="bi bi-controller"></i>
+                    <h2>Games</h2>
+                </article>
+                <article class="catego" data-filtro="Tv">
+                    <i class="bi bi-tv"></i>
+                    <h2>TV</h2>
+                </article>
+                <article class="catego" data-filtro="monitor">
+                    <i class="bi bi-tv"></i>
+                    <h2>Monitor</h2>
+                </article>
+                <article class="catego" data-filtro="eletronicos">
+                    <i class="bi bi-tag"></i>
+                    <h2>Eletrodoméstico</h2>
+                </article>
+
+            </section>
+            <!--Seção em destaque-->
+            <section class="destaque">
+
+                <div class="titulo">
+                    <h2> Mais Vendido</h2>
+                </div>
+
+                <div class="grid">
+                    <div class="produtos">
+                        <article class="produto" data-categoria="celulares" id="iphone-15">
+                            <span class="tag">🔥 Mais Vendido</span>
+                            <button class="btn-favorito" data-produto="iPhone 15">
+                                ❤️
+                            </button>
+                            <img src="IMG/iphone.png" alt="">
+                            <h3>iPhone 15</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(87)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 6.999,00
+                            </p>
+                            <p class="red">R$ 5.999,00</p>
+                            <button class="btn-carrinho" data-produto="iPhone 15" data-preco="5999">
+                                Adicionar ao carrinho
+                            </button>
+
+                        </article>
+                    </div> <!--Fim iphone-->
+
+                    <div class="produtos">
+                        <article class="produto" data-categoria="notebooks" id="notebooks">
+                            <span class="tag">🔥 Mais Vendido</span>
+                            <button class="btn-favorito" data-produto="Notebook">
+                                ❤️
+                            </button>
+                            <img src="IMG/notebook.png" alt="">
+                            <h3>Notebook</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(124)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 4.499,00
+                            </p>
+                            <p class="red">R$ 5.999,00</p>
+                            <button class="btn-carrinho" data-produto="Notebook" data-preco="4499">
+                                Adicionar ao carrinho
+                            </button>
+                        </article>
+                    </div> <!--Fim notebook-->
+
+                    <div class="produtos">
+                        <article class="produto" data-categoria="fones" id="fone-bjs">
+                            <span class="tag">🔥 Mais Vendido</span>
+                            <button class="btn-favorito" data-produto="Fone JBL tune 520BT">
+                                ❤️
+                            </button>
+                            <img src="IMG/foneJBL.jpg" alt="">
+                            <h3>Fone JBL tune 520BT</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(207)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 499,00
+                            </p>
+                            <p class="red">R$ 349,00</p>
+                            <button class="btn-carrinho" data-produto="Fone JBL tune 520BT" data-preco="349">
+                                Adicionar ao carrinho
+                            </button>
+                        </article>
+                    </div> <!--Fim  Fone jbl-->
+
+                    <div class="produtos">
+                        <article class="produto" data-categoria="smartwatch" id="smartwatch">
+                            <span class="tag">🔥 Mais Vendido</span>
+                            <button class="btn-favorito" data-produto="Smartwatch Apple Watch SE">
+                                ❤️
+                            </button>
+                            <img src="IMG/relogio.jpg" alt="">
+                            <h3>Smartwatch Apple Watch SE</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(183)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 6.999,00
+                            </p>
+                            <p class="red">R$ 1.799,00</p>
+                            <button class="btn-carrinho" data-produto="Smartwatch Apple Watch SE" data-preco="1799">
+                                Adicionar ao carrinho
+                            </button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!--Secao mais vendidos-->
+            <section class="destaque">
+
+                <div class="titulo">
+                    <h2>Destaque</h2>
+                </div>
+
+                <div class="grid">
+                    <div class="produtos">
+                        <article class="produto" data-categoria="Tv" id="ofertas">
+                            <span class="tag">⭐ Destaque</span>
+                            <button class="btn-favorito" data-produto="Smart TV Samsung 55">
+                                ❤️
+                            </button>
+                            <img src="https://images.samsung.com/is/image/samsung/p6pim/br/un50cu7700gxzd/gallery/br-uhd-4k-tv-un50cu7700gxzd-front-black-536081521?$650_519_PNG$"
+                                alt="">
+                            <h3>Smart TV Samsung 55</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(87)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 6.999,00
+                            </p>
+                            <p class="red">R$ 2.499,90</p>
+                            <button class="btn-carrinho" data-produto="Smart TV Samsung 55" data-preco="2499">
+                                Adicionar ao carrinho
+                            </button>
+                        </article>
+                    </div> <!--Fim iphone-->
+
+                    <div class="produtos">
+                        <article class="produto" data-categoria="games">
+                            <span class="tag">⭐ Destaque</span>
+                            <button class="btn-favorito" data-produto="PlayStation 5 Slim">
+                                ❤️
+                            </button>
+                            <img src="https://images.kabum.com.br/produtos/fotos/989702/console-sony-playstation-5-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-edicao-digital_1765487654_gg.jpg"
+                                alt="">
+                            <h3>PlayStation 5 Slim</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(124)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 4.499,00
+                            </p>
+                            <p class="red">R$ 3.499,90</p>
+                            <button class="btn-carrinho" data-produto="PlayStation 5 Slim" data-preco="3499">
+                                Adicionar ao carrinho
+                            </button>
+                        </article>
+                    </div> <!--Fim notebook-->
+
+                    <div class="produtos">
+                        <article class="produto" data-categoria="eletronicos">
+                            <span class="tag">⭐ Destaque</span>
+                            <button class="btn-favorito" data-produto="Headset HyperX">
+                                ❤️
+                            </button>
+                            <img src="https://hyperx.pk/wp-content/uploads/2021/02/hyperx_cloud_ii_red_1_main_900x.webp"
+                                alt="">
+                            <h3>Headset HyperX</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(207)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 499,00
+                            </p>
+                            <p class="red">R$ 199,00</p>
+                            <button class="btn-carrinho" data-produto="Headset HyperX" data-preco="499">
+                                Adicionar ao carrinho
+                            </button>
+                        </article>
+                    </div> <!--Fim  Fone jbl-->
+
+                    <div class="produtos">
+                        <article class="produto" data-categoria="monitor">
+                            <span class="tag">⭐ Destaque</span>
+                            <button class="btn-favorito" data-produto="Monitor Gamer">
+                                ❤️
+                            </button>
+                            <img src="https://www.bing.com/th/id/OIP.p71QrNdIxYAFETEcGuumBgHaE7?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2"
+                                alt="">
+                            <h3>Monitor Gamer</h3>
+                            <div class="avaliacao">
+
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+
+                                <span>(183)</span>
+
+                            </div>
+                            <p class="preco-antigo">
+                                R$ 6.999,00
+                            </p>
+                            <p class="red">R$ 1.299,90</p>
+                            <button class="btn-carrinho" data-produto="Monitor Gamer" data-preco="1299">
+                                Adicionar ao carrinho
+                            </button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!--Seção newsletter-->
+            <section class="newsletter">
+                <h2>Recebi mais ofertas exclusivas</h2>
+                <article class="secao-newsletter">
+                    <p> Cadastre seu e-mail e fique por dentro das promoçôes,<br>
+                        lançamentos e descontos especiais.
+                    </p>
+                    <p id="mensagem-email"></p>
+                    <input type="email" placeholder="Digite seu email" id="email">
+                    <button class="btn-inscrever " id="btn-inscrever">Inscrever-se</button>
+                </article>
+            </section>
+
+            <section class="carrinho-lista">
+
+                <h2> <i class="bi bi-cart3"></i>Carrinho</h2>
+                <h3 id="total">
+                    Total: R$ 0
+                </h3>
+                <button id="limpar-carrinho">
+                    Limpar Carrinho
+                </button>
+                <ul id="lista-carrinho">
+
+                </ul>
+
+            </section>
+
+            <!--secao modal-->
+            <div class="modal-carrinho" id="modal-carrinho">
+
+                <div class="conteudo-modal">
+                    <img src="IMG/logoDaEmpresa.png" alt="Logo da empresa" class="logo">
+                    <h2>Seu Carrinho</h2>
+                    <p id="mensagem-compra" class="mensagem-compra"></p>
+
+                    </p>
+                    <ul id="lista-carrinho-modal"></ul>
+                    <h3 id="total-modal">
+                        Total: R$ 0
+                    </h3>
+                    <button id="finalizar-compra">
+                        Finalizar Compra
+                    </button>
+                    <button id="fechar-modal">
+                        Fechar
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!--secao favoritos -->
+            <div class="modal-favoritos" id="modal-favoritos">
+
+                <div class="conteudo-modal">
+                    <img src="IMG/logoDaEmpresa.png" alt="Logo da empresa" class="logo">
+                    <h2>Seus Favoritos</h2>
+                    <ul id="lista-favoritos"></ul>
+                    <button id="fechar-favoritos">
+                        Fechar
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!--Seção do Footer-->
+            <footer>
+
+
+                <div class="footer-links">
+                    <article class="secao-footer">
+                        <h3>Institucional</h3>
+                        <ul>
+                            <li><a href="#">Sobre nós</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Politica de privacidade</a></li>
+                        </ul>
+                    </article>
+                    <article class="secao-footer">
+                        <h3>Categorias</h3>
+                        <ul>
+                            <li><a href="#">Smartphones</a></li>
+                            <li><a href="#">Notebooks</a></li>
+                            <li><a href="#">Games</a></li>
+                        </ul>
+                    </article>
+                    <article class="secao-footer">
+                        <h3>Atendimento</h3>
+                        <p><a href="#">📧 contato@mhtech.com</a></p>
+                        <p><a href="#">📱 (16) 98178-6112</a></p>
+                    </article>
+                </div>
+
+
+                <div class="banner-footer">
+                    <img src="IMG/logoDaEmpresa.png" alt="">
+                    <h2>Tecnologia de qualidade para o seu dia a dia</h2>
+                </div>
+
+
+            </footer>
+            <div class="copyright">
+
+                <p>
+                    © 2026 MH TechStore - Todos os direitos reservados
+                </p>
+
+            </div>
+
+        </main>
+
+
+    </div>
+
+</body>
+
+</html>
